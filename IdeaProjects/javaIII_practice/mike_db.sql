@@ -1,0 +1,2 @@
+CREATE DATABASE mike_db;
+
