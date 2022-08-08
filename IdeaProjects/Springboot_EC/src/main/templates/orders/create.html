@@ -6,10 +6,12 @@
 </head>
 <body>
 
+<h2>Create an Order</h2>
+
 <form th:action="@{/orders/create}" th:method="POST" th:object="${newOrder}">
     <div class="mb-3">
         <label class="form-label" for="email">Email</label>
-        <input th:field="*{email}" class="form-control" id="email" type="text" name="email" placeholder="Please enter you email">
+        <input th:field="*{email}" class="form-control" id="email" type="text" name="email" placeholder="Please enter your email">
     </div>
     <div class="mb-3">
         <label class="form-label" for="totalPrice">Total Price</label>

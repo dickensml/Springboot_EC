@@ -2,9 +2,28 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Modify an order</title>
 </head>
 <body>
+<h3>Modify your order</h3>
+
+<main class="container">
+    <form th:action="@{/orders/modify}" th:method="POST" th:object="${newOrder}">
+    <div class="mb-3">
+        <label class="form-label" for="email">Email</label>
+        <input th:field="*{email}" class="form-control" type="text" id="email" name="email" placeholder="Enter email">
+    </div>
+
+    <div class="mb-3">
+        <label class="form-label" for="totalPrice">Total price</label>
+        <input th:field="*{totalPrice}" type="text" class="form-control" name="totalPrice" id="totalPrice" placeholder="Enter total price"></input>
+    </div>
+
+    <div class="d-grid">
+        <button>Update It</button>
+    </div>
+    </form>
+</main>
 
 </body>
 </html>
